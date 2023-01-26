@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <!-- Import css styles page onto this webpage-->
+    <link rel="stylesheet" href="../static/styles.css"/>
+</head>
+
+<body>
+    <!-- Typical non-class div elements -->
+    <div>Hello World!</div>
+    <div>Hello again!</div>
+    <p>Hi . . . </p>
+
+    <!-- Div element with special class -->
+    <div class="alert-text">Okay, bye . . .</div>
+
+    <!-- ID selector (#) for single element 
+         typically not used (avoid where possible)-->
+    <div id="title">My Awesome Picnic</div>
+
+    <!-- Sharing selector css properties -->
+    <div class="intel">I have an intel processor</div>
+    <div class="amd">I have an amd processor</div>
+    
+    <!-- Chaining selectors (when two classes share a name i.e. subsection)-->
+    <div>
+        <div class="subsection heading">Latest Posts</div>
+        <div class="subsection preview">Preview my posts on insta</div>
+        <div class="subsection" id="preview">Another preview for my insta</div>
+    </div>
+
+    <!-- Descendant Combinators -->
+    <div class="descendant1">Hello
+        <div class="descendant2">there
+            <div class="descendant3">mate
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

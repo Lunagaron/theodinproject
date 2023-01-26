@@ -1,0 +1,43 @@
+/* Universal Selector - Edit the entire webpage */
+/* In the example below, the color of the text will be purple
+*  unless changed otherwise.
+*/
+*{
+    color: purple;
+}
+
+/* Type selector - Selects all class "div" and recolors the text
+ * into grey color.
+*/
+div{
+    color: grey;
+}
+
+/* Modifies the text in all classes with the name "alert" */
+.alert-text{
+    color: red;
+}
+
+/* Modifies attributes based on id # */
+#title{
+    background-color: red;
+    color: white;
+}
+
+/* Sharing decorations between two different classes */
+.amd, .intel{
+    color: black;
+    background-color: aqua;
+}
+
+/* Subsection stylisation on individual elements 
+ * exclusively modifies the class "subsection header"
+*/
+.subsection.heading{
+    color: red;
+}
+.subsection#preview{
+    color: blue;
+}
+
+/* Descendant Combinators */
