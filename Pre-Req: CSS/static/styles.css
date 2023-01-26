@@ -41,3 +41,9 @@ div{
 }
 
 /* Descendant Combinators */
+.descendant1 .descendant2{
+    background-color: antiquewhite;
+}
+.descendant1 .descendant2 .descendant3{
+    background-color: springgreen;
+}
