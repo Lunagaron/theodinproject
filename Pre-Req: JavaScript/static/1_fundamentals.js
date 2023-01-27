@@ -11,7 +11,7 @@
 *  Variables declared with 'const' are the same as 'let', except they cannot be reassigned after declaration.
 */
 let message = 'Hello';                                                      // Initialize and assign variable
-alert(message);                                                             // Shows variable content as popup
+//alert(message);                                                           // Shows variable content as popup
 let user = 'Bocchi', hobby = 'guitar', alias = 'guitarhero';                // Assign multiple variables at once
 
 /* Assignment */
@@ -35,3 +35,28 @@ let max = 57;
 let actual = max - 13;
 let percentage = actual / max;
 console.log(percentage);
+
+
+/* Strings */
+/* Quotation marks are very important for wrapping strings. Single and double quotation marks are suitable
+*  candidates to wrap strings inside. However a mixture will not work unless a special escape character (\) 
+*  is added before the quotation mark, i.e. const bigmouth.
+*/
+const sgl = 'Single quotation marks';
+const dbl = "Double quotation marks";
+const sglDbl = 'Would you eat a "fish supper" tonight?';                    
+const bigmouth = 'I\'ve got no right to eat this big fish!'
+
+/* To concatenate strings, variables needed to be wrapped inside a special set of symbols ${} with BACKTICKS (`)
+*  It is also possible to use "+" to concatenate strings
+*/
+const greeting = `Hello there`;
+const name = "Bocchi";
+const greetingPerson = `Hello there, ${name}`;
+console.log(greetingPerson);
+console.log(`${greeting}, ${name}`);
+console.log(greeting + ", " + name);
+
+/* Numbers
+*  Strings and numbers can also concanate together without issue. To make a string into a number, use number();
+*/
