@@ -18,7 +18,9 @@ div{
     color: red;
 }
 
-/* Modifies attributes based on id # */
+/* Modifies attributes based on id # 
+*  Note: Precedence of css is id -> class -> type selectors
+*/
 #title{
     background-color: red;
     color: white;
@@ -44,6 +46,20 @@ div{
 .descendant1 .descendant2{
     background-color: antiquewhite;
 }
+
+/* The important differences between padding, margins and borders 
+*  Padding - Increases the space between the edge of a box and the content inside
+*  Margin - Increases the space between a box and any other boxes alongside it
+*  Border - Adds space between the margin and the padding
+*/
 .descendant1 .descendant2 .descendant3{
     background-color: springgreen;
+    /* Indents the words by 20px all sides */
+    padding: 20px;
+    /* Makes the box smaller and wraps inside the larger div */
+    margin: 15px;
+    /* The red border */
+    border: 30px solid red;
 }
+
+

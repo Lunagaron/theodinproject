@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Tutorial</title>
-    <!-- Import css styles page onto this webpage-->
+
+    <!-- Import css styles page onto this webpage via External - Method 1-->
     <link rel="stylesheet" href="../static/styles.css"/>
+
 </head>
 
 <body>
@@ -42,6 +44,31 @@
         </div>
     </div>
 
+    <!-- Internal css stylisation directly from html - Method 2 -->
+    <style>
+        div{
+            color: white;
+            background-color: black;
+        }
+        p{
+            color: red;
+        }
+    </style>
+
+    <!-- Inline css stylisation directly from html - Method 3 -->
+    <div style="color: white; background-color: darkgoldenrod;">Wow so cool!</div>
+
+    <!-- Block vs Inline 
+         Block elements stack on top of one another, each new element starting on a new line
+         Meanwhile, in-line elements continue on and appear in line with whatever element they 
+         are placed besides, such as the <a> link tag. Padding and margins also behave uniquely
+         to these elements, and in general it is NOT recommended to add margins and paddings on
+         in-line elements! -->
+
+    <!-- Div vs Span
+         Div by nature is a block-level element used as a container to group other elements
+         Span on the other hand is an in-line element to group text content and inline HTML
+         elements for styling. -->
 
 </body>
 
