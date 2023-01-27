@@ -62,4 +62,62 @@ div{
     border: 30px solid red;
 }
 
+/* Flexbox Tutorial */
+.container{
+    border: 5px solid #ffcc5c;
+    display: flex;
+}
+.container > div{
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #ffeead;
+    flex: 1;
+    /* flex: 1 1 0%; */
+}
 
+/* The "flex" declaration is actually shorthand for 3 properties that can
+*  be set upon a flex item. 
+*
+*  @override width
+*
+*  These include:
+*  1. flex-grow: tells every div to grow the same amount. If one of them had
+*                div-grow of 2, then the div would be twice the size 
+*
+*  2. flex-shrink: similar to flex-grow but applies to shrinking the flex of an
+*                  item. If flex-shrink is set to zero, then the object does not
+*                  shrink at all. If it is set at 1, then the item shrinks evenly.
+*                  Note: Set flex-basis: auto in static flex-shrink containers.
+                   This will ensure that flex-basis checks for a width.
+*
+*  3. flex-basis: sets the base width of a container, becomes auto if the available
+*                 space is less then required and leaves whitespace if theyre smaller.
+*
+*  In the above example, flex:1 equates to grow and shrink = 1, and basis = 0.
+*  Another shorthand for this is flex: 1 1 0;
+*/
+.container1{
+    border: 5px solid #ffcc5c;
+    display: flex;
+}
+.container1 > div{
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+.container1 .onediv{
+    flex: 1 1 0%;
+    background-color: black;
+}
+.container1 .twodiv{
+    flex: 2 1 0%;
+    background-color: white;
+    color: crimson;
+}
+
+/* Axes for flex */
+.flexdirection{
+    flex-direction: column;
+}
