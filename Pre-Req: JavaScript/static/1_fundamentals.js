@@ -48,7 +48,8 @@ const sglDbl = 'Would you eat a "fish supper" tonight?';
 const bigmouth = 'I\'ve got no right to eat this big fish!'
 
 /* To concatenate strings, variables needed to be wrapped inside a special set of symbols ${} with BACKTICKS (`)
-*  It is also possible to use "+" to concatenate strings
+*  It is also possible to use "+" to concatenate strings.
+*  Javascript respects multi-line strings. A literal line break is represented as normal.
 */
 const greeting = `Hello there`;
 const name = "Bocchi";
@@ -60,3 +61,24 @@ console.log(greeting + ", " + name);
 /* Numbers
 *  Strings and numbers can also concanate together without issue. To make a string into a number, use number();
 */
+let myString = "123";
+const myNum = Number(myString);
+console.log(myNum);
+
+/* Conditionals
+*  The switch statement block can check the expression for the correct case output, return default if none match.
+*/
+const today = new Date().getDay();
+
+switch(today){
+    case 0:
+        console.log("It's Sunday today!");
+        break;
+
+    case 6:
+        console.log("It's Saturday today!");
+        break;
+
+    default:
+        console.log("It's a horrible day today :(");
+}

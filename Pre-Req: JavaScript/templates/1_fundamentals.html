@@ -15,5 +15,49 @@
         // Begin Javascript Code!
         console.log("Hello, World!")
     </script>
+
+    <!-- Light / Dark theme selector with Javascri -->
+    <label for="theme">Select theme: </label>
+    <select id="theme">
+        <option value="white">Light</option>
+        <option value="black">Dark</option>
+    </select>
+
+    <script>
+        const select = document.querySelector('select');
+        const html = document.querySelector('html');
+
+        // Event listener for select.value
+        select.addEventListener('change', () => select.value === 'black'
+        ? update('black', 'white')
+        : update('white', 'black')
+        );
+
+        /* Alternatively if there are multiple themes that are needed to be implemented
+
+            select.addEventListener('change' () =>{
+            const choice = select.value;
+            
+            switch(choice){
+                case 'black':
+                    update ('black','white');
+                    break;
+                case 'purple':
+                    update ('purple', 'white');
+                    break;
+                case 'white':
+                    update('white','black');
+                    break;
+            }
+        });
+        */
+
+        // Function to change html colors to either black / white
+        function update(bgColor, textColor){
+            html.style.backgroundColor = bgColor;
+            html.style.color = textColor;
+        }
+    </script>
+
 </body>
 </html>
