@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cell.classList.add("grid-cell");
       gridContainer.appendChild(cell);
     }
-    document.documentElement.style.setProperty("--size", size);
+    document.documentElement.style.setProperty("--size", size); // Creates global variable "--size" for css
   }
 
   // Automatically updates grid based on slider
