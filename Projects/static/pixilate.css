@@ -1,0 +1,24 @@
+#title {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-weight: bold;
+}
+
+#grid-container {
+  height: 70vh;
+  width: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  border: 10px solid black;
+  right: 5vw;
+}
+
+.grid-cell {
+  background-color: whitesmoke;
+  border: 1px solid lightgrey;
+  width: calc((70vh - 2px * var(--size)) / var(--size));
+  height: calc((70vh - 2px * var(--size)) / var(--size));
+}
