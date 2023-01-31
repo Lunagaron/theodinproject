@@ -6,6 +6,25 @@
   font-weight: bold;
 }
 
+#titleline {
+  height: 5px;
+  background-color: black;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+}
+
+.informationpanel {
+  width: 25vw;
+}
+
+.sliders {
+  width: 20vw;
+}
+
 #grid-container {
   height: 70vh;
   width: 70vh;
