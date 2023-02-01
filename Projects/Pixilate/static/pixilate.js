@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
        */
       cell.addEventListener("mousedown", () => {
         mouseDown = true;
+        // Simple if else to check for priority tool selection (eraser > rainbow > pen)
         if (eraserCheck.checked) {
           eraseClick(cell);
         } else if (rainbowMode.checked) {
@@ -98,9 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let result = [];
     for (let i = 0; i < 3; i++) {
       let randomIndex = Math.floor(Math.random() * colors.length);
-      let color = colors[randomIndex];
-      result.push(color);
+      let color = colors[randomIndex]; // Choose a random int within the colors array
+      result.push(color); // Push random int onto the stack three times
       if (result.filter((c) => c === color).length >= 2) {
+        // Ensures there are only 2max. of each int
         colors.splice(randomIndex, 1);
       }
     }
