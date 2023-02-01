@@ -54,7 +54,6 @@
 }
 .grid-cell {
   background-color: whitesmoke;
-  border: 1px solid lightgrey;
-  width: calc((100% - 2px * var(--size)) / var(--size));
-  height: calc((100% - 2px * var(--size)) / var(--size));
+  width: calc((100%) / var(--size));
+  height: calc((100%) / var(--size));
 }
