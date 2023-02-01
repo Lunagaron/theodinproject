@@ -20,52 +20,40 @@
 /* Creates three (uneven) containers */
 .container {
   display: flex;
-  height: 86vh;
+  height: calc(100vh - 160px);
+  text-align: center;
 }
-
+/* ----------------------------- */
 /* Information panel on the left */
 .container .informationpanel {
   width: 25vw;
   background-color: black;
   padding-left: 25px;
 }
-.container .informationpanel h1 {
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
-.container .informationpanel h4 {
-  font-weight: light;
-  color: white;
-}
-#bocchi {
-  position: absolute;
-  bottom: 10px;
-  width: 15vw;
-  left: 15px;
+
+/* ----------------------------- */
+/* Modifies the sliders and options */
+.sliders > div {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 25vw;
 }
 
-/* Customisation and Options Menu */
-.sliders {
-  width: 20vw;
-  text-align: center;
-}
-
-#grid-container {
-  /* Slider for grid-size */
-  height: 70vh;
-  width: 70vh;
-  display: flex;
-  flex-wrap: wrap;
-  position: absolute;
-  border: 10px solid black;
-  right: 5vw;
-}
-
+/* ----------------------------- */
 /* Grid cells */
 .grid-cell {
   background-color: whitesmoke;
   border: 1px solid lightgrey;
-  width: calc((70vh - 2px * var(--size)) / var(--size));
-  height: calc((70vh - 2px * var(--size)) / var(--size));
+  width: calc((100% - 2px * var(--size)) / var(--size));
+  height: calc((100% - 2px * var(--size)) / var(--size));
+}
+#grid-container {
+  /* Grid-container overall properties */
+  height: 900px;
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  border: 5px solid black;
+  right: 5vw;
 }

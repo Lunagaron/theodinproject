@@ -33,5 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Loads grids on startup / page refresh
   createGrid(gridSizeSlider.value);
+
+  // Update user with current slider size
+  document.body.addEventListener("input", () => {
+    document.getElementById(
+      "canvas-size-info"
+    ).innerHTML = `Current Canvas Resolution : ${gridSizeSlider.value}px`;
+  });
+
+  /* Fetches pen colour and draws onto the canvas */
+
+  // Initialize variables
+  const penColour = document.getElementById();
   /* End of DOMContentLoaded */
 });
