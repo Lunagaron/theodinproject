@@ -15,15 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const gridContainer = document.getElementById("grid-container");
   const gridSizeSlider = document.getElementById("grid-size");
 
-  // Create grids to be displayed
+  /* Function createGrid uses a simple if loop to create the amount of individual cells required
+   *  to fill the page with grids */
   function createGrid(size) {
     gridContainer.innerHTML = "";
     for (let i = 0; i < size * size; i++) {
       const cell = document.createElement("div");
       cell.classList.add("grid-cell");
+      // Begin implementation of drawing functionality
+      cell.addEventListener("click", () => {
+        mouseClick(cell);
+      }); // End implementation of drawing functionality
       gridContainer.appendChild(cell);
     }
-    document.documentElement.style.setProperty("--size", size); // Creates global variable "--size" for css
+    // Creates global variable "--size" for css
+    document.documentElement.style.setProperty("--size", size);
   }
 
   // Automatically updates grid based on slider
@@ -35,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   createGrid(gridSizeSlider.value);
 
   // Update user with current slider size
-  document.body.addEventListener("input", () => {
+  gridSizeSlider.addEventListener("input", () => {
     document.getElementById(
       "canvas-size-info"
     ).innerHTML = `Current Canvas Resolution : ${gridSizeSlider.value}px`;
@@ -44,6 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
   /* Fetches pen colour and draws onto the canvas */
 
   // Initialize variables
-  const penColour = document.getElementById();
+  const penColorChanger = document.getElementById("pen-color");
+
+  /* Function to change grid cell colour to penColour on click */
+  function mouseClick(item) {
+    item.style.backgroundColor = penColorChanger.value;
+  }
+
   /* End of DOMContentLoaded */
 });

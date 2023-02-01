@@ -41,12 +41,7 @@
 
 /* ----------------------------- */
 /* Grid cells */
-.grid-cell {
-  background-color: whitesmoke;
-  border: 1px solid lightgrey;
-  width: calc((100% - 2px * var(--size)) / var(--size));
-  height: calc((100% - 2px * var(--size)) / var(--size));
-}
+
 #grid-container {
   /* Grid-container overall properties */
   height: 900px;
@@ -56,4 +51,10 @@
   position: absolute;
   border: 5px solid black;
   right: 5vw;
+}
+.grid-cell {
+  background-color: whitesmoke;
+  border: 1px solid lightgrey;
+  width: calc((100% - 2px * var(--size)) / var(--size));
+  height: calc((100% - 2px * var(--size)) / var(--size));
 }
